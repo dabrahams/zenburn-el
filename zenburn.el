@@ -257,6 +257,7 @@
 
      '(trailing-whitespace ((t (:inherit font-lock-warning))))
      '(highlight ((t (:underline t))))
+     '(magit-item-highlight ((t (:underline nil))))
      '(paren ((t (:inherit zenburn-lowlight-1))))
      '(show-paren-mismatch ((t (:inherit font-lock-warning))))
      '(show-paren-match ((t (:inherit font-lock-keyword))))
