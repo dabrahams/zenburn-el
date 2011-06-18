@@ -106,6 +106,8 @@
        ((t (:foreground "#e37170" :background "#332323"))))
      '(zenburn-highlight-subtle
        ((t (:background "#464646"))))
+     `(zenburn-highlight-moderate
+       ((t (:background "#4a4a4a"))))
 
      '(zenburn-lowlight-1 ((t (:foreground "#606060"))))
      '(zenburn-lowlight-2 ((t (:foreground "#708070"))))
@@ -257,7 +259,7 @@
 
      '(trailing-whitespace ((t (:inherit font-lock-warning))))
      '(highlight ((t (:underline t))))
-     '(magit-item-highlight ((t (:underline nil))))
+     '(magit-item-highlight ((t (:inherit zenburn-highlight-moderate))))
      '(paren ((t (:inherit zenburn-lowlight-1))))
      '(show-paren-mismatch ((t (:inherit font-lock-warning))))
      '(show-paren-match ((t (:inherit font-lock-keyword))))
