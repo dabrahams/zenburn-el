@@ -262,7 +262,7 @@
      '(magit-item-highlight ((t (:inherit zenburn-highlight-moderate))))
      '(paren ((t (:inherit zenburn-lowlight-1))))
      '(show-paren-mismatch ((t (:inherit font-lock-warning))))
-     '(show-paren-match ((t (:inherit font-lock-keyword))))
+     `(show-paren-match ((t (:background "darkturquoise" :foreground ,zenburn-bg+2))))
      '(match ((t (:weight bold))))
 
      `(cursor ((t (:background "brown" :foreground ,zenburn-bg))))
