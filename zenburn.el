@@ -262,7 +262,7 @@
      '(show-paren-match ((t (:inherit font-lock-keyword))))
      '(match ((t (:weight bold))))
 
-     `(cursor ((t (:background "brown" :foreground ,zenburn-bg))))
+     `(cursor ((t (:background "#996633" :foreground ,zenburn-bg))))
      '(hover-highlight ((t (:underline t :foreground "#f8f893"))))
      '(menu ((t nil)))
      '(mouse ((t (:inherit zenburn-foreground))))
