@@ -199,7 +199,7 @@
      `(plain-widget-field
        ((t (:background ,zenburn-bg+2))))
      '(plain-widget-inactive
-       ((t (:strike-through t))))
+       ((t (:inherit zenburn-term-dark-gray))))
      `(plain-widget-single-line-field
        ((t (:background ,zenburn-bg+2))))
 
@@ -220,7 +220,7 @@
      `(fancy-widget-field
        ((t (:background ,zenburn-bg+2))))
      '(fancy-widget-inactive
-       ((t (:strike-through t))))
+       ((t (:inherit zenburn-term-dark-gray))))
      `(fancy-widget-single-line-field
        ((t (:background ,zenburn-bg+2))))
 
