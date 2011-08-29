@@ -262,10 +262,10 @@
      '(magit-item-highlight ((t (:inherit zenburn-highlight-moderate))))
      '(paren ((t (:inherit zenburn-lowlight-1))))
      '(show-paren-mismatch ((t (:inherit font-lock-warning))))
-     `(show-paren-match ((t (:background "darkturquoise" :foreground ,zenburn-bg+2))))
+     '(show-paren-match ((t (:inherit font-lock-keyword))))
      '(match ((t (:weight bold))))
 
-     `(cursor ((t (:background "#996633" :foreground ,zenburn-bg))))
+     `(cursor ((t (:background ,zenburn-fg :foreground ,zenburn-bg))))
      '(hover-highlight ((t (:underline t :foreground "#f8f893"))))
      '(menu ((t nil)))
      '(mouse ((t (:inherit zenburn-foreground))))
