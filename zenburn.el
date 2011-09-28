@@ -268,7 +268,7 @@
      `(cursor ((t (:background ,zenburn-fg :foreground ,zenburn-bg))))
      '(hover-highlight ((t (:underline t :foreground "#f8f893"))))
      '(menu ((t nil)))
-     '(mouse ((t (:inherit zenburn-foreground))))
+     `(mouse ((t (:foreground ,zenburn-fg))))
      `(scroll-bar ((t (:background ,zenburn-bg+2))))
      `(tool-bar ((t (:background ,zenburn-bg+2))))
 
@@ -279,9 +279,6 @@
      `(isearch ((t (:foreground ,zenburn-fg :background "#506070"))))
      `(isearch-lazy-highlight
        ((t (:foreground ,zenburn-fg :background "#1e2320" :weight normal))))
-
-     '(mtorus-highlight ((t (:inherit zenburn-highlight-bluish))))
-     '(mtorus-notify-highlight ((t (:inherit zenburn-primary-1))))
 
      '(which-func ((t (:inherit mode-line))))
 
@@ -524,11 +521,11 @@
        ((t (:inherit zenburn-primary-2))))
 
      '(gnus-summary-low-unread
-       ((t (:inherit zenburn-foreground :weight normal))))
+       ((t (:inherit default :weight normal))))
      '(gnus-summary-normal-unread
-       ((t (:inherit zenburn-foreground :weight normal))))
+       ((t (:inherit default :weight normal))))
      '(gnus-summary-high-unread
-       ((t (:inherit zenburn-foreground :weight bold))))
+       ((t (:inherit default :weight bold))))
 
      '(gnus-summary-low-read
        ((t (:inherit zenburn-green :weight normal))))
