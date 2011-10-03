@@ -26,6 +26,9 @@
 
 (require 'color-theme)
 
+(require 'cus-edit)            ;; for custom-face-tag-face et. al
+(require 'org-faces)           ;; for org faces in alias clause
+
 (defvar zenburn-fg "#dcdccc")
 (defvar zenburn-bg-1 "#282828")
 (defvar zenburn-bg "#3f3f3f")
@@ -800,7 +803,7 @@
     ;;      Are these aliases still necessary?
     (zenburn-make-face-alias-clauses
      '(Buffer-menu-buffer-face
-       apt-utils-broken-face
+;       apt-utils-broken-face
        apt-utils-description-face
        apt-utils-field-contents-face
        apt-utils-field-keyword-face
@@ -980,8 +983,8 @@
        message-header-xheader-face
        message-mml-face
        message-separator-face
-       mtorus-highlight-face
-       mtorus-notify-highlight-face
+;       mtorus-highlight-face
+;       mtorus-notify-highlight-face
        nxml-attribute-colon-face
        nxml-attribute-local-name-face
        nxml-attribute-prefix-face
@@ -1144,10 +1147,12 @@ static char *gnus-pointer[] = {
             (error "Invalid face alias: %s" alias-name)
           (let ((target-name (replace-regexp-in-string
                               ".*\\(-face\\)" ""
-                              alias-name nil nil 1)))
-            (push `(,(intern alias-name)
-                    ((t (:inherit ,(intern target-name)))))
-                  clauses)))))))
+                              alias-name nil nil 1))
+                (alias (intern alias-name)))
+            (unless (get alias 'face-alias)
+              (push `(,alias
+                      ((t (:inherit ,(intern target-name)))))
+                    clauses))))))))
 
 (defalias 'zenburn #'color-theme-zenburn)
 
